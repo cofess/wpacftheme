@@ -1,0 +1,279 @@
+html,
+body {
+  font: 14px 'Microsoft YaHei', Arial, Lucida Grande, Tahoma, sans-serif;
+  background: transparent;
+  overflow-x: hidden
+}
+
+a,
+a:focus,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  outline: 0;
+  box-shadow: none;
+}
+
+.alert-blue,
+.alert-blue *,
+.alert-blue [href],
+.alert-blue [href]:hover,
+.message,
+.message *,
+.message [href],
+.message [href]:hover,
+.notice,
+.notice *,
+.notice [href],
+.notice [href]:hover,
+.notice-info,
+.notice-info *,
+.notice-info [href],
+.notice-info [href]:hover,
+.notice-warning,
+.notice-warning *,
+.notice-warning [href],
+.notice-warning [href]:hover,
+.update-nag,
+.update-nag *,
+.update-nag [href],
+.update-nag [href]:hover {
+  color: lightsteelblue
+}
+
+#login_error,
+#login_error *,
+#login_error [href],
+#login_error [href]:hover,
+.notice-error,
+.notice-error *,
+.notice-error [href],
+.notice-error [href]:hover,
+.settings-error,
+.settings-error *,
+.settings-error [href],
+.settings-error [href]:hover,
+.theme-update-message,
+.theme-update-message *,
+.theme-update-message [href],
+.theme-update-message [href]:hover,
+div.error,
+div.error *,
+div.error [href],
+div.error [href]:hover {
+  color: lightpink
+}
+
+.notice-success,
+.notice-success *,
+.notice-success [href],
+.notice-success [href]:hover,
+div.updated,
+div.updated *,
+div.updated [href],
+div.updated [href]:hover {
+  color: lightgreen
+}
+
+#login_error,
+.alert-blue,
+.message,
+.notice,
+.notice-error,
+.notice-info,
+.notice-success,
+.notice-warning,
+.settings-error,
+.theme-update-message,
+.update-nag,
+div.error,
+div.updated {
+  margin: 15px 0!important;
+  padding: 0!important;
+  line-height: 1.4;
+  border: 0!important;
+  background: 0 0!important;
+  box-shadow: none!important;
+  clear: left!important
+}
+
+.login:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+  z-index: -1;
+}
+
+.login:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .6);
+  z-index: 0;
+}
+
+#login {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 30%;
+  background-color: rgba(255, 255, 255, .2);
+  border: 1px rgba(255, 255, 255, .3) solid;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, .2);
+  color: #ddd;
+  z-index: 9;
+}
+
+@media (min-width: 768px) {
+  #login {
+    width: 480px;
+    margin-top: 10%;
+    padding: 50px 30px 30px;
+  }
+}
+
+#login:before {
+  position: absolute;
+  content: '';
+  width: 36px;
+  height: 500px;
+  background-color: #fff;
+  z-index: 120;
+  top: -482px;
+  left: 50%;
+  margin-left: -18px;
+}
+
+#login:after {
+  position: absolute;
+  content: '';
+  top: 14px;
+  left: 50%;
+  width: 80px;
+  height: 8px;
+  background-color: rgba(0, 0, 0, .2);
+  border: 1px rgba(255, 255, 255, .5) solid;
+  margin-left: -40px;
+  border-radius: 8px;
+}
+
+#login a,
+.login #nav a,
+.login #backtoblog a {
+  color: #ddd
+}
+
+#login a:hover,
+.login #nav a:hover,
+.login #backtoblog a:hover,
+#login a:focus,
+.login #nav a:focus,
+.login #backtoblog a:focus,
+#login a:active,
+.login #nav a:active,
+.login #backtoblog a:active {
+  color: #fff
+}
+
+.login #nav {
+  margin-top: 0;
+}
+
+.login #login_error {
+  position: absolute;
+  top: 50px;
+  padding-left: 24px!important;
+  padding-right: 24px!important;
+}
+
+.login .message {
+  padding-left: 24px!important;
+  padding-right: 24px!important;
+  padding-top: 40px!important;
+  margin-bottom: -30px!important;
+}
+
+#login form {
+  background: transparent;
+  box-shadow: none;
+}
+
+#login input[type=checkbox],
+#login input[type=email],
+#login input[type=password],
+#login input[type=text] {
+  background-color: rgba(0, 0, 0, .1);
+  border: 1px rgba(255, 255, 255, .3) solid;
+  color: #fff
+}
+
+#login input[type=checkbox],
+#login input[type=email]:focus,
+#login input[type=password]:focus,
+#login input[type=text]:focus {
+  border-color: rgba(255, 255, 255, .65)
+}
+
+#login input[type=checkbox]:checked:before {
+  color: lightgreen;
+}
+
+
+/* Change Autocomplete styles in Chrome*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background: transparent;
+  border-color: transparent;
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#login input::-webkit-input-placeholder,
+#login textarea::-webkit-input-placeholder {
+  color: #bbb
+}
+
+#login input:-moz-placeholder,
+#login textarea:-moz-placeholder {
+  color: #bbb
+}
+
+#login input::-moz-placeholder,
+#login textarea::-moz-placeholder {
+  color: #bbb
+}
+
+#login input:-ms-input-placeholder,
+#login textarea:-ms-input-placeholder {
+  color: #bbb
+}
+
+
+/* footer */
+
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  color: #999;
+}
+
+.footer .bottom {
+  padding: 30px;
+  text-align: center;
+}

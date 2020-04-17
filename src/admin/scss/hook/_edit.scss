@@ -1,0 +1,30 @@
+#edittag {
+  max-width: inherit;
+  .form-field input[type=email],
+  .form-field input[type=number],
+  .form-field input[type=password],
+  .form-field input[type=search],
+  .form-field input[type=tel],
+  .form-field input[type=text],
+  .form-field input[type=url] {
+    width: auto;
+  }
+  input.large-text,
+  textarea.large-text {
+    width: 100%;
+  }
+}
+
+#edit-slug-box {
+  padding-left: 0;
+}
+
+[id^="wp-wp_editor"] {
+  .mce-btn {
+    &.mce-last {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+  }
+}

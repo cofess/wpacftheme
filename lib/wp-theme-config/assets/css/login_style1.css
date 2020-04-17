@@ -1,0 +1,145 @@
+html,
+body.login {
+    font: 14px 'Microsoft YaHei', Arial, Lucida Grande, Tahoma, sans-serif;
+}
+
+a,
+a:focus,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  outline: 0;
+  box-shadow: none;
+}
+
+.alert-blue,.alert-blue *,.alert-blue [href],.alert-blue [href]:hover,.message,.message *,.message [href],.message [href]:hover,.notice,.notice *,.notice [href],.notice [href]:hover,.notice-info,.notice-info *,.notice-info [href],.notice-info [href]:hover,.notice-warning,.notice-warning *,.notice-warning [href],.notice-warning [href]:hover,.update-nag,.update-nag *,.update-nag [href],.update-nag [href]:hover {
+    color: #00a0d2
+}
+
+#login_error,#login_error *,#login_error [href],#login_error [href]:hover,.notice-error,.notice-error *,.notice-error [href],.notice-error [href]:hover,.settings-error,.settings-error *,.settings-error [href],.settings-error [href]:hover,.theme-update-message,.theme-update-message *,.theme-update-message [href],.theme-update-message [href]:hover,div.error,div.error *,div.error [href],div.error [href]:hover {
+    color: #dc3232
+}
+
+.notice-success,.notice-success *,.notice-success [href],.notice-success [href]:hover,div.updated,div.updated *,div.updated [href],div.updated [href]:hover {
+    color: #46b450
+}
+
+#login_error,.alert-blue,.message,.notice,.notice-error,.notice-info,.notice-success,.notice-warning,.settings-error,.theme-update-message,.update-nag,div.error,div.updated {
+    margin: 15px 0!important;
+    padding: 0!important;
+    line-height: 1.4;
+    border: 0!important;
+    background: 0 0!important;
+    box-shadow: none!important;
+    clear: left!important
+}
+
+.login {
+    /*background-image: url("../images/bg/parallax_bg1.jpg");*/
+    background-attachment: fixed;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#login {
+    width: 590px;
+    background: #fff;
+    padding: 80px 0 100% 30px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    position: fixed;
+}
+
+#login h1,
+#login form,
+#login #login_error {
+    width: 560px;
+    box-shadow: none
+}
+
+#login h1 {
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
+
+#login label {
+    width: 100%
+}
+
+/** 登录DIV **/
+
+#login form {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+}
+
+#login .message,
+#login #login_error {
+    margin-left: -30px;
+    margin-right: -30px;
+    padding-left: 30px;
+}
+
+.login #backtoblog,
+.login #nav {
+    padding: 0;
+}
+
+/* footer */
+.footer {
+    width: 590px;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    color: #999;
+    margin-top: 30px;
+}
+
+.footer .bottom{
+    width: 560px;
+}
+
+@media (max-width: 767px) {
+    body,
+    html {
+        background: #fff;
+    }
+    .login {
+        background-image: none !important;
+        background-color: #fff !important;
+    }
+    #login {
+        width: auto;
+        min-width: auto;
+        padding: 0 30px!important;
+        border: none;
+    }
+    #login h1,
+    #login form,
+    #login #login_error {
+        width: auto
+    }
+    #login form {
+        box-shadow: none;
+        border: none;
+    }
+    #login{
+        position: relative;
+    }
+    .footer{
+        width: 100%;
+        min-width: auto;
+    }
+    .footer .bottom {
+        width: auto;
+        padding: 0 30px;
+    }
+}

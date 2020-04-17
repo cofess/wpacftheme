@@ -1,0 +1,67 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) { die; }
+
+define( 'WP_LIB_DIR', dirname(__FILE__) );
+
+require_once WP_LIB_DIR.'/Autoloader.php';
+// Abstract
+require_once WP_LIB_DIR.'/Abstracts/Db.php';
+require_once WP_LIB_DIR.'/Abstracts/Meta_Class_Abstract.php';
+require_once WP_LIB_DIR.'/Abstracts/Post_Abstract.php';
+// Traits
+require_once WP_LIB_DIR.'/Traits/Singleton.php';
+require_once WP_LIB_DIR.'/Traits/Comment_Trait.php';
+require_once WP_LIB_DIR.'/Traits/Taxonomy_Trait.php';
+// API
+require_once WP_LIB_DIR.'/API/Media.php';
+require_once WP_LIB_DIR.'/API/WooCommerce.php';
+require_once WP_LIB_DIR.'/API/YouTube.php';
+// Storage
+require_once WP_LIB_DIR.'/Storage/Cache.php';
+require_once WP_LIB_DIR.'/Storage/Cookie.php';
+// Tencent
+require_once WP_LIB_DIR.'/Tencent/WeChat.php';
+// UA
+require_once WP_LIB_DIR.'/UserAgent/IP.php';
+require_once WP_LIB_DIR.'/UserAgent/UA.php';
+// Http
+require_once WP_LIB_DIR.'/Http/Request.php';
+// Image
+require_once WP_LIB_DIR.'/Image/Avatar.php';
+require_once WP_LIB_DIR.'/Image/Image.php';
+require_once WP_LIB_DIR.'/Image/Image_Color.php';
+require_once WP_LIB_DIR.'/Image/Image_Resize.php';
+require_once WP_LIB_DIR.'/Image/Placeholder.php';
+// Util
+require_once WP_LIB_DIR.'/Util/Check.php';
+require_once WP_LIB_DIR.'/Util/Help.php';
+require_once WP_LIB_DIR.'/Util/Path.php';
+require_once WP_LIB_DIR.'/Util/Tool.php';
+require_once WP_LIB_DIR.'/Util/Zip.php';
+// Theme
+require_once WP_LIB_DIR.'/Theme/Pagination.php';
+require_once WP_LIB_DIR.'/Theme/Template.php';
+require_once WP_LIB_DIR.'/Theme/TemplateHelp.php';
+require_once WP_LIB_DIR.'/Theme/Theme.php';
+// Core
+require_once WP_LIB_DIR.'/Core/Api.php';
+require_once WP_LIB_DIR.'/Core/Dashboard.php';
+require_once WP_LIB_DIR.'/Core/Dependencies.php';
+require_once WP_LIB_DIR.'/Core/Menu.php';
+require_once WP_LIB_DIR.'/Core/Meta.php';
+require_once WP_LIB_DIR.'/Core/Page.php';
+require_once WP_LIB_DIR.'/Core/Post.php';
+require_once WP_LIB_DIR.'/Core/Post_List_Column.php';
+require_once WP_LIB_DIR.'/Core/PostQuery.php';
+require_once WP_LIB_DIR.'/Core/Route.php';
+require_once WP_LIB_DIR.'/Core/Taxonomy.php';
+require_once WP_LIB_DIR.'/Core/Term.php';
+require_once WP_LIB_DIR.'/Core/Thumbnail.php';
+require_once WP_LIB_DIR.'/Core/User.php';
+// Rest
+require_once WP_LIB_DIR.'/Rest/Auth_Table.php';
+require_once WP_LIB_DIR.'/Rest/Initial_Data.php';
+require_once WP_LIB_DIR.'/Rest/Login.php';
+require_once WP_LIB_DIR.'/Rest/Post.php';
+require_once WP_LIB_DIR.'/Rest/Query_Vars.php';
+require_once WP_LIB_DIR.'/Rest/Taxonomies.php';

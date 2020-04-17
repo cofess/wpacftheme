@@ -1,0 +1,58 @@
+// 插件安装页面
+.plugin-install-tab-featured {
+  >.wp-filter {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    &:after {
+      position: absolute;
+      content: '';
+      min-width: 100%;
+      // width: 100%;
+      height: 1px;
+      left: -20px;
+      right: -20px;
+      bottom: 0;
+      border-bottom: 1px solid #e5e5e5;
+      z-index: -1;
+    }
+    .filter-links li {
+      >a {
+        &:not(.current) {
+          border-color: transparent;
+        }
+      }
+      &:first-child {
+        >a {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.plugin-card {
+  .action-links {
+    width: 100px;
+  }
+  .desc,
+  .name {
+    margin-left: 140px;
+    margin-right: 100px;
+  }
+  .name {
+    a {
+      @include text-line-clamp(18px, 1.3, 1);
+    }
+  }
+  .desc {
+    p {
+      &:nth-child(1) {
+        @include text-line-clamp(13px, 1.5, 3);
+      }
+    }
+  }
+}

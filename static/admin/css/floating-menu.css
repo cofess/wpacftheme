@@ -1,0 +1,614 @@
+.fmenu .dashicons,
+.fmenu .dashicons-before:before {
+  line-height: 40px;
+  width: 46px;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+}
+
+/*------------------------------------*\
+    Floating Menu
+\*------------------------------------*/
+.fmenu--tl {
+  animation: fromTop 1s 1;
+  -webkit-animation: fromTop 1s 1;
+}
+
+.fmenu--tr {
+  animation: fromTop 1.3s 1;
+  -webkit-animation: fromTop 1.3s 1;
+}
+
+.fmenu--br {
+  animation: fromBottom 1.6s 1;
+  -webkit-animation: fromBottom 1.6s 1;
+}
+
+.fmenu--bl {
+  animation: fromBottom 1.9s 1;
+  -webkit-animation: fromBottom 1.9s 1;
+}
+
+@keyframes fromBottom {
+  0% {
+    transform: translateY(250px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromTop {
+  0% {
+    transform: translateY(-250px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fromBottom {
+  0% {
+    transform: translateY(250px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fromTop {
+  0% {
+    transform: translateY(-250px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.fmenu--tl,
+.fmenu--tr,
+.fmenu--bl,
+.fmenu--br {
+  box-sizing: border-box;
+  margin: 25px;
+  position: fixed;
+  white-space: nowrap;
+  z-index: 30;
+  padding-left: 0;
+  list-style: none;
+}
+
+.fmenu--tl *,
+.fmenu--tr *,
+.fmenu--bl *,
+.fmenu--br *,
+.fmenu--tl *:before,
+.fmenu--tr *:before,
+.fmenu--bl *:before,
+.fmenu--br *:before,
+.fmenu--tl *:after,
+.fmenu--tr *:after,
+.fmenu--bl *:after,
+.fmenu--br *:after {
+  box-sizing: inherit;
+}
+
+/**
+ * placement of the button.
+ */
+.fmenu--tl {
+  left: 0;
+  top: 0;
+}
+
+.fmenu--tr {
+  right: 0;
+  top: 0;
+}
+
+.fmenu--bl {
+  left: 0;
+  bottom: 0;
+}
+
+.fmenu--br {
+  right: 0;
+  bottom: 0;
+}
+
+#mtrl-floatingmenu {
+  z-index: 9999999;
+  width: 50px;
+}
+
+/*
+    #BUTTONS | Base
+*/
+.fmenu__button--main,
+.fmenu__button--child {
+  background-color: #e91e63;
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  position: relative;
+  -webkit-user-drag: none;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+  border: none;
+  border-radius: 50%;
+}
+
+.fmenu__button--main:focus,
+.fmenu__button--child:focus,
+.fmenu__button--main,
+.fmenu__button--child {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.10), 0 4px 8px rgba(0, 0, 0, 0.20);
+}
+
+/***/
+.fmenu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fmenu__list>li {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 1px;
+  padding: 10px 0;
+  margin: -10px 0;
+}
+
+#mtrl-floatingmenu .fmenu__main-icon--resting,
+#mtrl-floatingmenu .fmenu__main-icon--resting.dashicons-before:before,
+#mtrl-floatingmenu .fmenu__main-icon--active,
+#mtrl-floatingmenu .fmenu__main-icon--active.dashicons-before:before {
+  font-size: 25px;
+  line-height: 50px;
+  height: auto;
+  color: #ffffff;
+}
+
+.fmenu__list .fmenu__child-icon,
+.fmenu__list .fmenu__child-icon:before {
+  width: 42px;
+  height: auto;
+  line-height: 42px;
+  text-align: center;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+/**
+ * icons inside the main button
+ */
+.fmenu__icon,
+.fmenu__main-icon--active,
+.fmenu__main-icon--resting {
+  position: absolute;
+  font-size: 18px;
+  text-align: center;
+  line-height: 50px;
+  width: 100%;
+}
+
+.fmenu__wrap {
+  padding: 0;
+  margin: 0;
+}
+
+[data-mtrlfm-toggle="hover"]:hover .fmenu__icon,
+[data-mtrlfm-toggle="hover"]:hover .fmenu__main-icon--active,
+[data-mtrlfm-toggle="hover"]:hover .fmenu__main-icon--resting,
+[data-mtrlfm-toggle="hover"]:hover .fmenu__child-icon,
+[data-mtrlfm-state="open"] .fmenu__icon,
+[data-mtrlfm-state="open"] .fmenu__main-icon--active,
+[data-mtrlfm-state="open"] .fmenu__main-icon--resting,
+[data-mtrlfm-state="open"] .fmenu__child-icon {
+  -webkit-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+}
+
+/*
+    #BUTTONS
+*/
+.fmenu__button--main {
+  height: 50px;
+  width: 50px;
+  z-index: 20;
+}
+
+.fmenu__button--child {
+  height: 42px;
+  width: 42px;
+  margin: 0 4px;
+}
+
+.fmenu__main-icon--active,
+.fmenu__main-icon--resting {
+  -webkit-transform: scale(1) rotate(180deg);
+  transform: scale(1) rotate(180deg);
+  -webkit-transition: -webkit-transform 150ms cubic-bezier(0.4, 0, 1, 1);
+  transition: transform 150ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+.fmenu__main-icon--active {
+  opacity: 0;
+}
+
+[data-mtrlfm-toggle="hover"]:hover .fmenu__main-icon,
+[data-mtrlfm-state="open"] .fmenu__main-icon {
+  -webkit-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+}
+
+[data-mtrlfm-toggle="hover"]:hover .fmenu__main-icon--resting,
+[data-mtrlfm-state="open"] .fmenu__main-icon--resting {
+  opacity: 0;
+  position: absolute !important;
+}
+
+[data-mtrlfm-toggle="hover"]:hover .fmenu__main-icon--active,
+[data-mtrlfm-state="open"] .fmenu__main-icon--active {
+  opacity: 1;
+}
+
+/*
+    #BUTTONS | Animations
+*/
+
+.fmenu--tl.mtrlfm-slidein .fmenu__list li,
+.fmenu--tr.mtrlfm-slidein .fmenu__list li {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.fmenu--tl.mtrlfm-slidein[data-mtrlfm-toggle="hover"]:hover .fmenu__list li,
+.fmenu--tl.mtrlfm-slidein[data-mtrlfm-state="open"] .fmenu__list li,
+.fmenu--tr.mtrlfm-slidein[data-mtrlfm-toggle="hover"]:hover .fmenu__list li,
+.fmenu--tr.mtrlfm-slidein[data-mtrlfm-state="open"] .fmenu__list li {
+  opacity: 1;
+}
+
+.fmenu--bl.mtrlfm-slidein .fmenu__list li,
+.fmenu--br.mtrlfm-slidein .fmenu__list li {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.fmenu--bl.mtrlfm-slidein[data-mtrlfm-toggle="hover"]:hover .fmenu__list li,
+.fmenu--bl.mtrlfm-slidein[data-mtrlfm-state="open"] .fmenu__list li,
+.fmenu--br.mtrlfm-slidein[data-mtrlfm-toggle="hover"]:hover .fmenu__list li,
+.fmenu--br.mtrlfm-slidein[data-mtrlfm-state="open"] .fmenu__list li {
+  opacity: 1;
+}
+
+/**
+ * ZOOM-IN
+ * When hovering the main button, the child buttons grow
+ * from zero to normal size.
+ *
+ */
+.fmenu--tl.mtrlfm-zoomin .fmenu__list li,
+.fmenu--tr.mtrlfm-zoomin .fmenu__list li {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: all 0.5s;
+}
+
+.fmenu--tl.mtrlfm-zoomin .fmenu__list li:nth-child(1),
+.fmenu--tr.mtrlfm-zoomin .fmenu__list li:nth-child(1) {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: all 0.5s;
+  transition-delay: 0.15s;
+}
+
+.fmenu--tl.mtrlfm-zoomin .fmenu__list li:nth-child(2),
+.fmenu--tr.mtrlfm-zoomin .fmenu__list li:nth-child(2) {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: all 0.5s;
+  transition-delay: 0.1s;
+}
+
+.fmenu--tl.mtrlfm-zoomin .fmenu__list li:nth-child(3),
+.fmenu--tr.mtrlfm-zoomin .fmenu__list li:nth-child(3) {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: all 0.5s;
+  transition-delay: 0.05s;
+}
+
+.fmenu--tl.mtrlfm-zoomin .fmenu__list li:nth-child(4),
+.fmenu--tr.mtrlfm-zoomin .fmenu__list li:nth-child(4) {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: all 0.5s;
+  transition-delay: 0s;
+}
+
+.fmenu--tl.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li,
+.fmenu--tl.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li,
+.fmenu--tr.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li,
+.fmenu--tr.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition-delay: 0.2s;
+}
+
+.fmenu--tl.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li:nth-child(1),
+.fmenu--tl.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li:nth-child(1),
+.fmenu--tr.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li:nth-child(1),
+.fmenu--tr.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li:nth-child(1) {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition-delay: 0.05s;
+}
+
+.fmenu--tl.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li:nth-child(2),
+.fmenu--tl.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li:nth-child(2),
+.fmenu--tr.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li:nth-child(2),
+.fmenu--tr.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li:nth-child(2) {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition-delay: 0.1s;
+}
+
+.fmenu--tl.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li:nth-child(3),
+.fmenu--tl.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li:nth-child(3),
+.fmenu--tr.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li:nth-child(3),
+.fmenu--tr.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li:nth-child(3) {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition-delay: 0.15s;
+}
+
+.fmenu--tl.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li:nth-child(4),
+.fmenu--tl.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li:nth-child(4),
+.fmenu--tr.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li:nth-child(4),
+.fmenu--tr.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li:nth-child(4) {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition-delay: 0.2s;
+}
+
+.fmenu--bl.mtrlfm-zoomin .fmenu__list li,
+.fmenu--br.mtrlfm-zoomin .fmenu__list li {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: all 0.5s;
+}
+
+.fmenu--bl.mtrlfm-zoomin .fmenu__list li:nth-child(1),
+.fmenu--br.mtrlfm-zoomin .fmenu__list li:nth-child(1) {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: all 0.5s;
+  transition-delay: 0.15s;
+}
+
+.fmenu--bl.mtrlfm-zoomin .fmenu__list li:nth-child(2),
+.fmenu--br.mtrlfm-zoomin .fmenu__list li:nth-child(2) {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: all 0.5s;
+  transition-delay: 0.1s;
+}
+
+.fmenu--bl.mtrlfm-zoomin .fmenu__list li:nth-child(3),
+.fmenu--br.mtrlfm-zoomin .fmenu__list li:nth-child(3) {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: all 0.5s;
+  transition-delay: 0.05s;
+}
+
+.fmenu--bl.mtrlfm-zoomin .fmenu__list li:nth-child(4),
+.fmenu--br.mtrlfm-zoomin .fmenu__list li:nth-child(4) {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: all 0.5s;
+  transition-delay: 0s;
+}
+
+.fmenu--bl.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li,
+.fmenu--bl.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li,
+.fmenu--br.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li,
+.fmenu--br.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition-delay: 0.2s;
+}
+
+.fmenu--bl.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li:nth-child(1),
+.fmenu--bl.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li:nth-child(1),
+.fmenu--br.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li:nth-child(1),
+.fmenu--br.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li:nth-child(1) {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition-delay: 0.05s;
+}
+
+.fmenu--bl.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li:nth-child(2),
+.fmenu--bl.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li:nth-child(2),
+.fmenu--br.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li:nth-child(2),
+.fmenu--br.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li:nth-child(2) {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition-delay: 0.1s;
+}
+
+.fmenu--bl.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li:nth-child(3),
+.fmenu--bl.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li:nth-child(3),
+.fmenu--br.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li:nth-child(3),
+.fmenu--br.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li:nth-child(3) {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition-delay: 0.15s;
+}
+
+.fmenu--bl.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li:nth-child(4),
+.fmenu--bl.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li:nth-child(4),
+.fmenu--br.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li:nth-child(4),
+.fmenu--br.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li:nth-child(4) {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition-delay: 0.2s;
+}
+
+/*
+    #LABELS | base
+*/
+
+[data-mtrlfm-label]:after {
+  content: attr(data-mtrlfm-label);
+  opacity: 0;
+  transition: all 0.5s;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 3px 10px;
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  font-weight: normal;
+  pointer-events: none;
+  line-height: normal;
+  position: absolute;
+  top: 50%;
+  margin-top: -14px;
+  transition: all 0.5s;
+}
+
+.fmenu__list li:hover [data-mtrlfm-label]:after {
+  content: attr(data-mtrlfm-label);
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+/*
+    #LABELS | Modifiers
+*/
+.fmenu--br [data-mtrlfm-label]:after,
+.fmenu--tr [data-mtrlfm-label]:after {
+  content: attr(data-mtrlfm-label);
+  right: 55px;
+}
+
+.fmenu--br .fmenu__list [data-mtrlfm-label]:after,
+.fmenu--tr .fmenu__list [data-mtrlfm-label]:after {
+  content: attr(data-mtrlfm-label);
+  right: 55px;
+}
+
+.fmenu--tl [data-mtrlfm-label]:after,
+.fmenu--bl [data-mtrlfm-label]:after {
+  content: attr(data-mtrlfm-label);
+  left: 55px;
+}
+
+.fmenu--tl .fmenu__list [data-mtrlfm-label]:after,
+.fmenu--bl .fmenu__list [data-mtrlfm-label]:after {
+  content: attr(data-mtrlfm-label);
+  left: 55px;
+}
+
+/* link icons position */
+.fmenu__list>li {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  opacity: 0;
+  width: 50px;
+}
+
+.fmenu--bl.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li,
+.fmenu--br.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li,
+.fmenu--bl.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li,
+.fmenu--br.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li,
+.fmenu--bl.mtrlfm-slidein[data-mtrlfm-toggle="hover"]:hover .fmenu__list li,
+.fmenu--br.mtrlfm-slidein[data-mtrlfm-toggle="hover"]:hover .fmenu__list li,
+.fmenu--bl.mtrlfm-slidein[data-mtrlfm-state="open"] .fmenu__list li,
+.fmenu--br.mtrlfm-slidein[data-mtrlfm-state="open"] .fmenu__list li {
+  position: relative;
+  bottom: 50px;
+  right: 0px;
+  opacity: 1;
+}
+
+.fmenu__list {
+  padding-bottom: 42px;
+}
+
+.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list,
+.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list,
+.mtrlfm-slidein[data-mtrlfm-toggle="hover"]:hover .fmenu__list,
+.mtrlfm-slidein[data-mtrlfm-state="open"] .fmenu__list {
+  padding-bottom: 60px;
+}
+
+.fmenu__button--main {
+  position: absolute;
+  bottom: 0px;
+  right: auto;
+}
+
+/*top style*/
+.fmenu--tl .fmenu__list>li,
+.fmenu--tr .fmenu__list>li {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  opacity: 0;
+  width: 50px;
+}
+
+.fmenu--tl.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li,
+.fmenu--tr.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list li,
+.fmenu--tl.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li,
+.fmenu--tr.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list li,
+.fmenu--tl.mtrlfm-slidein[data-mtrlfm-toggle="hover"]:hover .fmenu__list li,
+.fmenu--tr.mtrlfm-slidein[data-mtrlfm-toggle="hover"]:hover .fmenu__list li,
+.fmenu--tl.mtrlfm-slidein[data-mtrlfm-state="open"] .fmenu__list li,
+.fmenu--tr.mtrlfm-slidein[data-mtrlfm-state="open"] .fmenu__list li {
+  position: relative;
+  top: 50px;
+  right: 0px;
+  opacity: 1;
+}
+
+.fmenu--tl .fmenu__list,
+.fmenu--tr .fmenu__list {
+  padding-bottom: 0px;
+  padding-top: 42px;
+}
+
+.fmenu--tr.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list,
+.fmenu--tl.mtrlfm-zoomin[data-mtrlfm-toggle="hover"]:hover .fmenu__list,
+.fmenu--tr.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list,
+.fmenu--tl.mtrlfm-zoomin[data-mtrlfm-state="open"] .fmenu__list,
+.fmenu--tr.mtrlfm-slidein[data-mtrlfm-toggle="hover"]:hover .fmenu__list,
+.fmenu--tl.mtrlfm-slidein[data-mtrlfm-toggle="hover"]:hover .fmenu__list,
+.fmenu--tr.mtrlfm-slidein[data-mtrlfm-state="open"] .fmenu__list,
+.fmenu--tl.mtrlfm-slidein[data-mtrlfm-state="open"] .fmenu__list {
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+
+.fmenu--tr .fmenu__button--main,
+.fmenu--tl .fmenu__button--main {
+  position: absolute;
+  top: 0px;
+  right: auto;
+}

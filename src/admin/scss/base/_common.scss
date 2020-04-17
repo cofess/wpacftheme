@@ -1,0 +1,25 @@
+// a:link,
+// a:visited,
+// a:hover,
+// a:active {
+//   border: 0;
+//   outline: none;
+// }
+
+a:focus {
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}

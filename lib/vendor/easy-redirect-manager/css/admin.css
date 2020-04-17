@@ -1,0 +1,133 @@
+#adminmenu .toplevel_page_wps-backup-suite .wp-submenu.wp-submenu-wrap a {
+  background: #E0870A !important;
+}
+
+#adminmenu .toplevel_page_wps-backup-suite .wp-submenu.wp-submenu-wrap a:hover {
+  color: #23282D !important;
+}
+
+#adminmenu .toplevel_page_wps-backup-suite .wp-submenu.wp-submenu-wrap {
+  padding-top:0px !important;
+}
+
+#adminmenu .toplevel_page_wps-backup-suite a {
+  background: #FF9500 !important;
+  font-weight: bold;
+}
+
+#adminmenu .toplevel_page_wps-backup-suite a img {
+  padding-top: 7px;
+}
+
+.wps-header-bar {
+  background: #f1f1f1;
+  margin-left: -20px;
+  height: 100px;
+}
+
+.wps-header-bar h1 {
+  line-height: 100px;
+  margin: 0px 0px 0px 20px;
+  display: inline-block;
+}
+
+.wps-header-bar h1 a {
+  vertical-align: middle !important;
+  margin-left:20px !important;
+}
+
+/* .wps-header-bar-right {
+  float: right;
+  margin: 30px 30px 0px 0px;
+}
+
+.wps-header-bar-right a {
+  display: block;
+  text-align: right;
+  color: #585858;
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 10px;
+} */
+
+.clear {
+  clear: both;
+  display: block;
+}
+
+.wps-col-left {
+  vertical-align: top;
+  display: inline-block;
+  width: 80%;
+}
+
+.wps-col-right {
+  vertical-align: top;
+  display: inline-block;
+  width: 18%;
+  margin-left: 15px;
+}
+
+.wps-box {
+  background: #fff;
+  border:1px solid #d1d1d1;
+}
+
+.wps-box-title {
+  background: #fff;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+
+.wps-box-title h2 {
+  font-size: 14px;
+  margin: 0;
+  padding: 10px 15px;
+}
+
+.wps-box-content {
+  padding: 15px;
+  background: #F9F9F9;
+}
+
+.wps-box-content label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+.wps-box-content .clear {
+  height: 20px;
+}
+
+.wps-box-content p.desc {
+  margin-bottom: 10px;
+  display: block;
+  font-size: 12px;
+  color: #555;
+}
+
+.wps-error {
+  background: #f2dede;
+  border:1px solid #ebccd1;
+  border-radius:5px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+.wps-error p {
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+}
+
+.wps-error i {
+  margin-right: 10px;
+  color: #E40B0B;
+  font-size: 32px;
+}
+
+.remove-in-progress td {
+  background: #FDC3C3;
+}

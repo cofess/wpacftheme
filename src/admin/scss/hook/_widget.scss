@@ -1,0 +1,12 @@
+[id*="tr"] {
+  .widget-title {
+    h3:before {
+      content: "\273F";
+      color: #0073aa;
+      font-weight: normal;
+      font-size: 1em;
+      line-height: 1;
+      margin-right: 3px;
+    }
+  }
+}

@@ -1,0 +1,633 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font: 15px/1.5 Lato, "Century Gothic", "Trebuchet MS", Helvetica, Arial, sans-serif;
+    background-color: #fff;
+    color: #262626;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    /* Location of the image */
+    background-image: url(../images/bg.jpg);
+    /* Image is centered vertically and horizontally at all times */
+    background-position: center center;
+    /* Image doesn't repeat */
+    background-repeat: no-repeat;
+    /* Makes the image fixed in the viewport so that it doesn't move when 
+     the content height is greater than the image height */
+    background-attachment: fixed;
+    /* This is what makes the background image rescale based on its container's size */
+    background-size: cover;
+    /* Pick a solid background color that will be displayed while the background image is loading */
+    background-color: #464646;
+    /* SHORTHAND CSS NOTATION
+   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+   */
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* base */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    color: #ffea00;
+    transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+}
+
+a:hover {
+    color: #fff;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px
+    }
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.block-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.header {
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 8%;
+}
+
+.header h1 {
+    color: #fff;
+    font-family: 'Roboto Slab Bold';
+    font-weight: 300;
+    line-height: 40px;
+    text-rendering: optimizelegibility;
+    font-size: 44px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.header .content {
+    color: #fff;
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 0;
+    margin: 25px auto;
+    text-align: center;
+}
+
+/* page-overlay */
+
+.page-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.page-overlay-none {
+    display: none;
+    visibility: hidden;
+}
+
+.page-overlay-image {
+    background-image: url(../images/lines.png);
+    background-repeat: repeat;
+}
+
+.page-overlay-color {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line */
+
+.line {
+    margin-top: 20px;
+}
+
+.line>div {
+    width: 200px;
+    height: 1px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+/*   Count down css*/
+
+.count_down {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+ul#countdown {
+    list-style: none;
+    margin: 80px 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 0;
+    display: block;
+    text-align: center;
+}
+
+ul#countdown li {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ul#countdown li span {
+    font-family: Lato, "Century Gothic", "Trebuchet MS", Helvetica, sans-serif;
+    color: #fff;
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: 300;
+    width: 130px;
+    float: left;
+    margin-bottom: 15px;
+}
+
+ul#countdown li.seperator {
+    font-size: 80px;
+    line-height: 70px;
+    vertical-align: top;
+}
+
+ul#countdown li p {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Roboto Slab Bold';
+}
+
+/*footter css*/
+
+footer {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px 0;
+}
+
+footer img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    opacity: .8;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-menu ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+}
+
+.footer-menu ul li {
+    display: inline;
+    margin-right: 2%;
+}
+
+.footer-menu ul li a {
+    padding: 5px 15px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    opacity: .80;
+}
+
+.footer-menu ul li:last-child {
+    margin-right: 0;
+}
+
+footer .copyright {
+    color: #fff;
+    /* font-family: 'Open Sans', Helvetica, Arial, sans-serif; */
+    font-size: 13px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.footer-social_menu ul {
+    /* margin: 0 0 20px 0; */
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+}
+
+.footer-social_menu ul li {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 5px 8px 4px 8px;
+    width: 36px;
+    cursor: pointer;
+    margin: 10px 5px;
+}
+
+.footer-social_menu ul li:hover {
+    background: #ffea00;
+    border: 1px solid #ffea00;
+}
+
+.footer-social_menu ul li:hover i {
+    color: #222;
+}
+
+.footer-social_menu ul li i {
+    font-size: 18px;
+}
+
+.footer-social_menu ul li a {
+    display: inline-block;
+    color: #fff;
+}
+
+.footer-social_menu ul li img {
+    margin-left: 0;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+/* Responsive */
+
+@media (max-width: 639px) {
+    .header h1 {
+        line-height: 40px;
+        margin: 5px 0 20px;
+        font-size: 24px;
+        margin-top: 50px;
+    }
+    .header .content {
+        font-size: 14px;
+    }
+    ul#countdown {
+        margin: 30px 0;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    ul#countdown li {
+        width: 50%;
+        float: left;
+        margin-top: 15px;
+    }
+    ul#countdown li span {
+        display: block;
+        font-size: 36px;
+        line-height: 36px;
+        width: 100%;
+        float: none;
+        margin-bottom: 0;
+    }
+    footer {
+        padding: 15px 0;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+    .header h1 {
+        line-height: 40px;
+        margin: 5px 0 20px;
+        font-size: 24px;
+        margin-top: 50px;
+    }
+    .header .content {
+        font-size: 14px;
+    }
+    ul#countdown {
+        margin: 80px 0;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    ul#countdown li span {
+        font-size: 56px;
+        line-height: 56px;
+        width: auto;
+        margin-bottom: 10px;
+    }
+}
+
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

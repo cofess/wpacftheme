@@ -1,0 +1,8 @@
+框架改动：创建多个框架实例
+
+以下三个文件必需拷贝到cs-framework根目录，覆盖文件
+cs-framework.php
+cs-framework-path.php
+functions/actions.php
+
+其他文件可拷贝到cs-framework-override目录，框架会优先从cs-framework-override目录加载

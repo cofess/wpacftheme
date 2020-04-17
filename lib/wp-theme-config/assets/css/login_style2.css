@@ -1,0 +1,225 @@
+html,
+body {
+    font: 14px 'Microsoft YaHei', Arial, Lucida Grande, Tahoma, sans-serif;
+    background: #fff;
+    overflow-x: hidden
+}
+
+a,
+a:focus,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  outline: 0;
+  box-shadow: none;
+}
+
+.alert-blue,.alert-blue *,.alert-blue [href],.alert-blue [href]:hover,.message,.message *,.message [href],.message [href]:hover,.notice,.notice *,.notice [href],.notice [href]:hover,.notice-info,.notice-info *,.notice-info [href],.notice-info [href]:hover,.notice-warning,.notice-warning *,.notice-warning [href],.notice-warning [href]:hover,.update-nag,.update-nag *,.update-nag [href],.update-nag [href]:hover {
+    color: #00a0d2
+}
+
+#login_error,#login_error *,#login_error [href],#login_error [href]:hover,.notice-error,.notice-error *,.notice-error [href],.notice-error [href]:hover,.settings-error,.settings-error *,.settings-error [href],.settings-error [href]:hover,.theme-update-message,.theme-update-message *,.theme-update-message [href],.theme-update-message [href]:hover,div.error,div.error *,div.error [href],div.error [href]:hover {
+    color: #dc3232
+}
+
+.notice-success,.notice-success *,.notice-success [href],.notice-success [href]:hover,div.updated,div.updated *,div.updated [href],div.updated [href]:hover {
+    color: #46b450
+}
+
+#login_error,.alert-blue,.message,.notice,.notice-error,.notice-info,.notice-success,.notice-warning,.settings-error,.theme-update-message,.update-nag,div.error,div.updated {
+    margin: 15px 0!important;
+    padding: 0!important;
+    line-height: 1.4;
+    border: 0!important;
+    background: 0 0!important;
+    box-shadow: none!important;
+    clear: left!important
+}
+
+.login:before{
+    content: '';
+    display:block;
+    width: 100%;
+    height: 40%;
+    background: #f1f1f1;
+}
+
+#login{
+    position: relative;
+    padding-top: 0;
+    margin-top: -60px;
+}
+
+.login h1 a{
+    position: absolute;
+    top: -200px;
+    left: 0;
+    right: 0;
+}
+
+.login #login_error,.login .message{
+    position: absolute;
+    top: 5px;
+    padding-left: 24px!important;
+    padding-right: 24px!important;
+}
+
+#login form{
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.login #nav{
+    margin-top: -80px;
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: #999;
+}
+
+.footer .bottom{
+    padding: 30px;
+    text-align: center;
+}
+
+/* owl-login */
+#owl-login {
+  width: 211px;
+  height: 108px;
+  background-image: url("../images/form/owl-login.png");
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  margin-left: -111px;
+  z-index: 1;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
+  #owl-login {
+    background-image: url("../images/form/owl-login@2x.png");
+    -webkit-background-size: 211px 108px;
+    -moz-background-size: 211px 108px;
+    background-size: 211px 108px;
+  }
+}
+#owl-login .hand {
+  width: 34px;
+  height: 34px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  background-color: #472d20;
+  -webkit-transform: scaleY(0.6);
+  -moz-transform: scaleY(0.6);
+  -o-transform: scaleY(0.6);
+  -ms-transform: scaleY(0.6);
+  transform: scaleY(0.6);
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  -ms-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  position: absolute;
+  left: 14px;
+  bottom: -8px;
+}
+#owl-login .hand.hand-r {
+  left: 170px;
+}
+#owl-login.password .hand {
+  -webkit-transform: translateX(42px) translateY(-15px) scale(0.7);
+  -moz-transform: translateX(42px) translateY(-15px) scale(0.7);
+  -o-transform: translateX(42px) translateY(-15px) scale(0.7);
+  -ms-transform: translateX(42px) translateY(-15px) scale(0.7);
+  transform: translateX(42px) translateY(-15px) scale(0.7);
+}
+#owl-login.password .hand.hand-r {
+  -webkit-transform: translateX(-42px) translateY(-15px) scale(0.7);
+  -moz-transform: translateX(-42px) translateY(-15px) scale(0.7);
+  -o-transform: translateX(-42px) translateY(-15px) scale(0.7);
+  -ms-transform: translateX(-42px) translateY(-15px) scale(0.7);
+  transform: translateX(-42px) translateY(-15px) scale(0.7);
+}
+#owl-login .arms {
+  top: 58px;
+  position: absolute;
+  width: 100%;
+  height: 41px;
+  overflow: hidden;
+}
+#owl-login .arms .arm {
+  width: 40px;
+  height: 65px;
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  background-image: url("../images/form/owl-login-arm.png");
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  -ms-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
+  #owl-login .arms .arm {
+    background-image: url("../images/form/owl-login-arm@2x.png");
+    -webkit-background-size: 40px 65px;
+    -moz-background-size: 40px 65px;
+    background-size: 40px 65px;
+  }
+}
+#owl-login .arms .arm.arm-r {
+  -webkit-transform: rotate(20deg) scaleX(-1);
+  -moz-transform: rotate(20deg) scaleX(-1);
+  -o-transform: rotate(20deg) scaleX(-1);
+  -ms-transform: rotate(20deg) scaleX(-1);
+  transform: rotate(20deg) scaleX(-1);
+  left: 158px;
+}
+#owl-login.password .arms .arm {
+  -webkit-transform: translateY(-40px) translateX(40px);
+  -moz-transform: translateY(-40px) translateX(40px);
+  -o-transform: translateY(-40px) translateX(40px);
+  -ms-transform: translateY(-40px) translateX(40px);
+  transform: translateY(-40px) translateX(40px);
+}
+#owl-login.password .arms .arm.arm-r {
+  -webkit-transform: translateY(-40px) translateX(-40px) scaleX(-1);
+  -moz-transform: translateY(-40px) translateX(-40px) scaleX(-1);
+  -o-transform: translateY(-40px) translateX(-40px) scaleX(-1);
+  -ms-transform: translateY(-40px) translateX(-40px) scaleX(-1);
+  transform: translateY(-40px) translateX(-40px) scaleX(-1);
+}
+
+@media (max-width: 767px) {
+  .login:before{
+    height: 30%;
+    background-image: none !important;
+  }
+  #login{
+    width: 88%;
+  }
+  .footer .bottom{
+    padding: 15px 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  #login{
+    width: 480px;
+  }
+}
+
+@media (min-width: 970px) {
+  #login{
+    width: 520px;
+  }
+}

@@ -1,0 +1,43 @@
+/**
+ * Scrollbar style
+ * https://codepen.io/akinjide/pen/BpggrZ
+ */
+body *::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background: transparent;
+}
+
+body *::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background: transparent;
+  transition: .3s background;
+}
+
+body *::-webkit-scrollbar-thumb {
+  background: #ced4da;
+}
+
+body *:hover::-webkit-scrollbar-thumb {
+  background: #adb5bd;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: #F2F2F2;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background: #F2F2F2;
+  transition: .3s background;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #868e96;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #868e96;
+}

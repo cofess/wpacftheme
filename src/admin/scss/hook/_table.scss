@@ -1,0 +1,80 @@
+table {
+  &.wp-list-table {
+    &.widefat td,
+    &.widefat th {
+      vertical-align: middle;
+    }
+    .row-actions {
+      left: auto;
+      font-size: 12px;
+    }
+    .column-thumbnail,
+    .column-image,
+    .column-images {
+      width: 3em;
+      img {
+        max-width: 100%!important;
+        width: auto!important;
+        height: 40px!important;
+      }
+    }
+    .column-cover_image {
+      width: 5em;
+      img {
+        max-width: 100%!important;
+        width: auto!important;
+        height: 40px!important;
+      }
+    }
+    .column-is_exclude {
+      width: 4em;
+    }
+    .column-event_status {
+      width: 6em;
+    }
+    .column-bind_taxonomies {
+      width: 6.5em;
+    }
+    .column-source {
+      width: 7em;
+    }
+    .column-post_views,
+    .column-helpful,
+    .column-unhelpful {
+      width: 7em;
+    }
+    .column-number,
+    .column-hire_date,
+    .column-valid_date,
+    .column-position,
+    .column-job_type {
+      width: 10em;
+    }
+    .column-slug,
+    .column-name,
+    .column-place {
+      width: 10em;
+    }
+    .column-last_login,
+    .column-registered {
+      width: 10em;
+    }
+    .column-company {
+      width: 15em;
+    }
+    .column-primary {
+      &.column-name {
+        width: 15em;
+      }
+    }
+    .column-info {
+      width: 25em;
+    }
+    .column-comments,
+    .column-links,
+    .column-posts,
+    .widefat .num {
+      text-align: left
+    }
+  }
+}

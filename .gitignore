@@ -1,0 +1,6 @@
+cache/
+config/theme.php
+config/system.php
+config/storage.php
+config/plugin.php
+typerocket-bak/

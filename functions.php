@@ -112,22 +112,12 @@ WpThemeConfig\ThemeConfig::getInstance();
 
 /*
  |--------------------------------------------------------------------------
- | Codestar Framework
+ | Options Page
  |--------------------------------------------------------------------------
  | * github：https://github.com/Codestar/codestar-framework
  | * site：http://codestarframework.com/
 */
-require_once 'lib/framework/cs-framework/cs-framework.php';
-function custom_cs_framework_override() {
-  return 'lib/framework/cs-framework-override'; // default "cs-framework-override"
-}
-add_filter( 'cs_framework_override', 'custom_cs_framework_override' );
-define( 'CS_ACTIVE_FRAMEWORK',   true  ); // default true
-define( 'CS_ACTIVE_METABOX',     false ); // default true
-define( 'CS_ACTIVE_TAXONOMY',    false ); // default true
-define( 'CS_ACTIVE_SHORTCODE',   false ); // default true
-define( 'CS_ACTIVE_CUSTOMIZE',   false ); // default true
-define( 'CS_ACTIVE_LIGHT_THEME', true  ); // default false
+require_once 'lib/options-page/options-page.php';
 
 /*
  |--------------------------------------------------------------------------

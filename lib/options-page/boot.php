@@ -52,4 +52,4 @@ function acf_options_init() {
   // }
 } 
 
-require_once 'site-options.php';
+require_once 'theme.options.php';

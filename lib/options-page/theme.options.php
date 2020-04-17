@@ -5,15 +5,12 @@ function my_acf_add_local_field_groups() {
     return;
   } 
 
+  $options = array();
+  require '_theme/base.fields.php';
+
   acf_add_local_field_group(array('key' => 'group_cso_contact_info',
       'title' => 'Contact Info',
-      'fields' => array (
-        array ('key' => 'field_1',
-          'label' => 'Sub Title',
-          'name' => 'sub_title',
-          'type' => 'text',
-          )
-        ),
+      'fields' => $options,
       'location' => array (
         array (
           array ('param' => 'options_page',

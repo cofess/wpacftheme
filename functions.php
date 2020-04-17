@@ -117,7 +117,7 @@ WpThemeConfig\ThemeConfig::getInstance();
  | * github：https://github.com/Codestar/codestar-framework
  | * site：http://codestarframework.com/
 */
-require_once 'lib/options-page/options-page.php';
+require_once 'lib/options-page/boot.php';
 
 /*
  |--------------------------------------------------------------------------

@@ -6,15 +6,15 @@ function my_acf_add_local_field_groups() {
   } 
 
   acf_add_options_sub_page([
-    'page_title' => '网站设置',
-    'menu_title' => '网站设置',
-    'menu_slug' => 'site-options',
+    'page_title' => 'Contact Information',
+    'menu_title' => 'Contact Info',
+    // 'menu_slug' => 'contact_info',
     'parent_slug' => 'options-general.php',
     'capability' => 'manage_options',
     'update_button'   => __('Update', 'acf'),
     'updated_message' => __("Options Updated", 'acf'),
   ]);
-
+  
   // $options = array();
   // require '_theme/base.fields.php';
   acf_add_local_field_group(array('key' => 'group_5e6ec344a808e',
@@ -55,7 +55,7 @@ function my_acf_add_local_field_groups() {
         array (
           array ('param' => 'options_page',
             'operator' => '==',
-            'value' => 'site-options',
+            'value' => 'acf-options-contact-info',
             ),
           ),
         ),
@@ -102,7 +102,7 @@ function my_acf_add_local_field_groups() {
         array (
           array ('param' => 'options_page',
             'operator' => '==',
-            'value' => 'site-options',
+            'value' => 'acf-options-contact-info',
             ),
           ),
         ),

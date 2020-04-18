@@ -8,6 +8,7 @@ function acf_options_init() {
   if (!function_exists('acf_add_options_page')) {
     return;
   } 
+
   acf_add_options_page([
     'page_title' => 'Site Options',
     'menu_title' => 'Site Options',
@@ -17,15 +18,7 @@ function acf_options_init() {
     'updated_message' => __("Options Updated", 'acf'),
     // 'redirect' => true
   ]);
-  acf_add_options_sub_page([
-    'page_title' => 'Contact Information',
-    'menu_title' => 'Contact Info',
-    // 'menu_slug' => 'contact_info',
-    'parent_slug' => 'common_site_options',
-    'capability' => 'manage_options',
-    'update_button'   => __('Update', 'acf'),
-    'updated_message' => __("Options Updated", 'acf'),
-  ]);
+  
   acf_add_options_sub_page([
     'page_title' => 'Code Injection',
     'menu_title' => 'Code Injection',
@@ -62,6 +55,6 @@ function acf_options_init() {
   //   // return
   //   return $paths;
   // }
+  
+  require_once 'theme.options.php';
 } 
-
-require_once 'theme.options.php';

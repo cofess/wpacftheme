@@ -1,23 +1,23 @@
 <?php
 
-function my_acf_add_local_field_groups() {
+function acf_add_system_field_groups() {
   if (!function_exists('acf_add_options_page')) {
     return;
   } 
 
   acf_add_options_sub_page([
-    'page_title' => 'Contact Information',
-    'menu_title' => 'Contact Info',
-    // 'menu_slug' => 'contact_info',
+    'page_title' => '系统设置',
+    'menu_title' => '系统设置',
+    'menu_slug' => 'system-options',
     'parent_slug' => 'options-general.php',
     'capability' => 'manage_options',
     'update_button'   => __('Update', 'acf'),
     'updated_message' => __("Options Updated", 'acf'),
   ]);
-  
+
   // $options = array();
   // require '_theme/base.fields.php';
-  acf_add_local_field_group(array('key' => 'group_5e6ec344a808e',
+  acf_add_local_field_group(array('key' => 'group_' . uniqid(),
       'title' => 'Product image',
       'menu_order' => 5,
       'position' => 'side',
@@ -55,13 +55,13 @@ function my_acf_add_local_field_groups() {
         array (
           array ('param' => 'options_page',
             'operator' => '==',
-            'value' => 'acf-options-contact-info',
+            'value' => 'system-options',
             ),
           ),
         ),
       ));
 
-  acf_add_local_field_group(array('key' => 'group_contact_info',
+  acf_add_local_field_group(array('key' => 'group_' . uniqid(),
       'title' => 'Contact Info',
       'menu_order' => 0,
       'position' => 'normal', 
@@ -102,11 +102,11 @@ function my_acf_add_local_field_groups() {
         array (
           array ('param' => 'options_page',
             'operator' => '==',
-            'value' => 'acf-options-contact-info',
+            'value' => 'system-options',
             ),
           ),
         ),
       ));
 } 
 
-add_action('acf/init', 'my_acf_add_local_field_groups');
+add_action('acf/init', 'acf_add_system_field_groups');

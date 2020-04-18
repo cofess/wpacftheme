@@ -1,6 +1,6 @@
 <?php
 
-function my_acf_add_local_field_groups() {
+function acf_add_site_field_groups() {
   if (!function_exists('acf_add_options_page')) {
     return;
   } 
@@ -17,7 +17,7 @@ function my_acf_add_local_field_groups() {
 
   // $options = array();
   // require '_theme/base.fields.php';
-  acf_add_local_field_group(array('key' => 'group_5e6ec344a808e',
+  acf_add_local_field_group(array('key' => 'group_' . uniqid(),
       'title' => 'Product image',
       'menu_order' => 5,
       'position' => 'side',
@@ -61,7 +61,7 @@ function my_acf_add_local_field_groups() {
         ),
       ));
 
-  acf_add_local_field_group(array('key' => 'group_contact_info',
+  acf_add_local_field_group(array('key' => 'group_' . uniqid(),
       'title' => 'Contact Info',
       'menu_order' => 0,
       'position' => 'normal', 
@@ -109,4 +109,4 @@ function my_acf_add_local_field_groups() {
       ));
 } 
 
-add_action('acf/init', 'my_acf_add_local_field_groups');
+add_action('acf/init', 'acf_add_site_field_groups');

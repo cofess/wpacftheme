@@ -11,12 +11,10 @@ function acf_add_site_field_groups() {
     'menu_slug' => 'site-options',
     'parent_slug' => 'options-general.php',
     'capability' => 'manage_options',
-    'update_button'   => __('Update', 'acf'),
+    'update_button' => __('Update', 'acf'),
     'updated_message' => __("Options Updated", 'acf'),
-  ]);
+    ]);
 
-  // $options = array();
-  // require '_theme/base.fields.php';
   acf_add_local_field_group(array('key' => 'group_' . uniqid(),
       'title' => 'Product image',
       'menu_order' => 5,
@@ -61,7 +59,12 @@ function acf_add_site_field_groups() {
         ),
       ));
 
-  acf_add_local_field_group(array('key' => 'group_' . uniqid(),
+  $options = array();
+  require '_theme/base.fields.php';
+  require '_theme/site.fields.php';
+  $options = array_reduce($options, 'array_merge', array());
+
+  acf_add_local_field_group(array('key' => 'group_theme_options',
       'title' => 'Contact Info',
       'menu_order' => 0,
       'position' => 'normal', 
@@ -71,33 +74,7 @@ function acf_add_site_field_groups() {
       'hide_on_screen' => '',
       'active' => true,
       'description' => '',
-      'fields' => array (
-        array ('key' => 'field_5bead261dabb4',
-          'label' => '基础设置',
-          'name' => '',
-          'type' => 'tab',
-          'instructions' => '',
-          'required' => 0,
-          'conditional_logic' => 0,
-          'placement' => 'top',
-          "endpoint" => 0
-          ),
-        array ('key' => 'field_1',
-          'label' => 'Sub Title2',
-          'name' => 'sub_title',
-          'type' => 'text',
-          ),
-        array ('key' => 'field_2',
-          'label' => '优化设置',
-          'name' => '',
-          'type' => 'tab',
-          'instructions' => '',
-          'required' => 0,
-          'conditional_logic' => 0,
-          'placement' => 'top',
-          "endpoint" => 0
-          ),
-        ),
+      'fields' => $options,
       'location' => array (
         array (
           array ('param' => 'options_page',
